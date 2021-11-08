@@ -1,0 +1,49 @@
+body {
+height: 100vh;
+width: 100vw;
+}
+
+.start {
+position: absolute;
+right: 61%;
+font-size: 15px;
+}
+
+
+.container {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.game-board {
+    /* background-image: url("hotpink-checkerboard.png"); */
+    background-color: whitesmoke;
+    border-style: solid;
+    width: 70vmin; /*Board scales according to minimised window size */
+    height: 70vmin;
+    display: grid;
+    grid-template: repeat(10, 1fr) / repeat(10, 1fr);
+    /*(10 x 10 grid)*/
+    grid-template-areas: "snake apple"; /*Keeps grid items in the same area*/
+}
+
+.snake {
+    grid-area: snake / col4 / sixth-line / 5;
+    grid-row: 6;
+    background-color: skyblue;
+    border: 0.25vmin solid black;
+    width: 20px;
+    height: 20px;
+}
+
+.apple {
+    grid-area: apple / col5 / sixth-line / 6;
+    grid-row: 6;
+    background-color: red;
+    border: 0.25vmin solid black;
+    width: 20px;
+    height: 20px;
+}
