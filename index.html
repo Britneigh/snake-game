@@ -6,17 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snake Game</title>
     <link rel="stylesheet" href="style.css">
+    <script src="classes.js" defer></script>
     <script src="script.js" defer></script>
 </head>
 <body>
 <div class="container">
-    <div class="score"></div>
-    <div class="game-board">
-    <div class="grid-item snake"></div>
-    <div class="grid-item apple"></div>
+    <div class="highScore">Highscore:<span id="highScore">0</span></div>
+    <div class="applesAte">Apples ate:<span id="applesAte">0</span></div>
+    <div id="game-board" class="game-board">
+    <div id="snake" class="grid-item snake"></div>
+    <div id="apple" class="grid-item apple"></div>
     </div>
 </div>
 <br>
-<button class="start">Start/Restart</button>
+<button class="start" onclick="gameStart()">Start game</button>
 </body>
 </html>

@@ -1,0 +1,45 @@
+"use strict";
+var gameBoard = document.getElementById("game-board");
+var highScore = 0; //HTMLSpanElement = document.querySelector("span")!
+var applesAte = 0; //HTMLSpanElement = document.querySelector("span")!
+var startBtn = document.getElementsByClassName("start");
+document.querySelector(".apple");
+var speed = 1;
+//let board = new Board(Snake, Apple, 40, 80)
+var apple = new Apple(20, 30); //Sets apple position
+/*setInterval(function(){
+    snake.eatApple()})
+setTimeout((3000), function(){
+    apple.spawnApple()}) */
+var snake = new Snake(3, 20, 50, 0, 1, 1); //Sets snake position
+setInterval(function () {
+    snake.move();
+}, 100);
+//Movement Controls
+document.body.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowUp" /*&& direction !== "Down"*/) {
+        snake.steer("Up");
+    }
+    else if (e.key === "ArrowDown" /*&& direction !== "Up"*/) {
+        snake.steer("Down");
+    }
+    else if (e.key === "ArrowLeft" /*&& direction !== "Right"*/) {
+        snake.steer("Left");
+    }
+    else if (e.key === "ArrowRight" /*&& direction !== "Left"*/) {
+        snake.steer("Right");
+    }
+    //To stop the ArrowUp and ArrowDown key from scrolling up/down
+    e.preventDefault();
+});
+function segments() {
+    for (length = 3; length < length; length++) {
+        length++;
+    }
+}
+function newRecord() {
+    if (applesAte > highScore) {
+        highScore = applesAte;
+    }
+    // Update highscore
+}

@@ -19,31 +19,57 @@ font-size: 15px;
 }
 
 .game-board {
-    /* background-image: url("hotpink-checkerboard.png"); */
-    background-color: whitesmoke;
+    background-image: url('Checkboard.jpg');
+    background-size: 200px 300px;
+    /*background-color: rgb(236, 228, 221);*/
     border-style: solid;
-    width: 70vmin; /*Board scales according to minimised window size */
-    height: 70vmin;
+    width: 400px; /*Board scales according to minimised window size */
+    height: 800px;
     display: grid;
-    grid-template: repeat(10, 1fr) / repeat(10, 1fr);
-    /*(10 x 10 grid)*/
+    grid-template: repeat(50, 1fr) / repeat(100, 1fr);
+    /*(50 x 100 grid)*/
     grid-template-areas: "snake apple"; /*Keeps grid items in the same area*/
+    position: relative;
 }
 
 .snake {
-    grid-area: snake / col4 / sixth-line / 5;
-    grid-row: 6;
-    background-color: skyblue;
+    /* grid-area: snake / col4 / sixth-line / 5;
+    grid-row: 6; */
+    width: 10px;
+    height: 10px;
     border: 0.25vmin solid black;
-    width: 20px;
-    height: 20px;
+    position: absolute;
+    background-color: skyblue;
 }
 
 .apple {
-    grid-area: apple / col5 / sixth-line / 6;
-    grid-row: 6;
+    /*grid-area: apple / col5 / sixth-line / 6;
+    grid-row: 6; */
     background-color: red;
     border: 0.25vmin solid black;
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-image: url('apple.png');
+}
+
+.highScore{
+    font-weight: bold;
+    position: absolute;
+    right: 39%;
+    bottom: 7.3%;
+}
+
+.applesAte {
+    font-weight: bold;
+    position: absolute;
+    right: 46%;
+    bottom: 7.3%;
+}
+
+.start {
+    background-color: pink;
+    border-radius: 15px;
+    position: absolute;
+    right: 55%;
 }
