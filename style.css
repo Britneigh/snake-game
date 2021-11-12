@@ -26,8 +26,8 @@ font-size: 15px;
     width: 400px; /*Board scales according to minimised window size */
     height: 800px;
     display: grid;
-    grid-template: repeat(50, 1fr) / repeat(100, 1fr);
-    /*(50 x 100 grid)*/
+    grid-template: repeat(40, 1fr) / repeat(80, 1fr);
+    /*(40 x 80 grid)*/
     grid-template-areas: "snake apple"; /*Keeps grid items in the same area*/
     position: relative;
 }

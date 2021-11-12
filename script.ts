@@ -17,6 +17,7 @@ backgroundMusic.volume = 0.2;
     let snake = new Snake(3,20,50,0,1,1) //Sets snake position
 function gameStart(){
 backgroundMusic.play();
+backgroundMusic.loop = true;
 setInterval(function(){
     snake.move()}, 100)
 }

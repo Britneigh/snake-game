@@ -16,6 +16,7 @@ var apple = new Apple(20, 30); //Sets apple position
 var snake = new Snake(3, 20, 50, 0, 1, 1); //Sets snake position
 function gameStart() {
     backgroundMusic.play();
+    backgroundMusic.loop = true;
     setInterval(function () {
         snake.move();
     }, 100);
