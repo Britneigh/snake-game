@@ -50,7 +50,7 @@ font-size: 15px;
     width: 10px;
     height: 10px;
     position: absolute;
-    background-image: url('apple.png');
+    /*background-image: url('apple.png'); */
 }
 
 .highScore{

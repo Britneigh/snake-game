@@ -2,13 +2,15 @@
 const score:HTMLSpanElement = document.getElementById("highScore")!
 const appleCounter:HTMLSpanElement = document.getElementById("applesAte")!
 const gameBoard:HTMLElement = document.getElementById("game-board")!
-let highScore:number = 0
-let applesAte:number = 0
 const startBtn = document.getElementsByClassName("start")
 document.querySelector(".apple")
-let speed = 1
+
+let highScore:number = 0
+let applesAte:number = 0
+
+//Music and Sound effects
 const appleSound = new Audio('Apple Bite sound effect.mp3')
-const gameOverSound = new Audio('Defeat sound effect.mp3')
+const gameOverSound = new Audio('Defeat.sound.mp3')
 gameOverSound.volume = 0.3;
 const backgroundMusic = new Audio('Wii Music.mp3')
 backgroundMusic.volume = 0.2;
@@ -19,7 +21,7 @@ function gameStart(){
 backgroundMusic.play();
 backgroundMusic.loop = true;
 setInterval(function(){
-    snake.move()}, 100)
+    snake.move()}, 100) //Snake moves when game starts
 }
 
 
@@ -43,7 +45,7 @@ score.innerHTML = `${highScore}`
 appleCounter.innerHTML = `${applesAte}`
 setInterval(function(){
     appleCounter.textContent = `${applesAte}`
-    score.textContent = `${applesAte}`
+    score.textContent = `${highScore}`
 })
 }
 

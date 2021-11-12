@@ -2,13 +2,13 @@
 var score = document.getElementById("highScore");
 var appleCounter = document.getElementById("applesAte");
 var gameBoard = document.getElementById("game-board");
-var highScore = 0;
-var applesAte = 0;
 var startBtn = document.getElementsByClassName("start");
 document.querySelector(".apple");
-var speed = 1;
+var highScore = 0;
+var applesAte = 0;
+//Music and Sound effects
 var appleSound = new Audio('Apple Bite sound effect.mp3');
-var gameOverSound = new Audio('Defeat sound effect.mp3');
+var gameOverSound = new Audio('Defeat.sound.mp3');
 gameOverSound.volume = 0.3;
 var backgroundMusic = new Audio('Wii Music.mp3');
 backgroundMusic.volume = 0.2;
@@ -19,7 +19,7 @@ function gameStart() {
     backgroundMusic.loop = true;
     setInterval(function () {
         snake.move();
-    }, 100);
+    }, 100); //Snake moves when game starts
 }
 //Movement Controls
 document.body.addEventListener("keydown", function (e) {
@@ -43,7 +43,7 @@ function update() {
     appleCounter.innerHTML = "" + applesAte;
     setInterval(function () {
         appleCounter.textContent = "" + applesAte;
-        score.textContent = "" + applesAte;
+        score.textContent = "" + highScore;
     });
 }
 if (applesAte > highScore) {
